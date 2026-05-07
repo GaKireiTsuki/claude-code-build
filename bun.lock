@@ -1,5 +1,6 @@
 {
   "lockfileVersion": 1,
+  "configVersion": 0,
   "workspaces": {
     "": {
       "name": "claude-code-build",
@@ -49,8 +50,9 @@
         "plist": "^3.1.0",
         "proper-lockfile": "^4.1.2",
         "qrcode": "^1.5.4",
-        "react": "^0.0.0-experimental-74568e86-20260328",
-        "react-reconciler": "^0.0.0-experimental-74568e86-20260328",
+        "react": "0.0.0-experimental-74568e86-20260328",
+        "react-dom": "0.0.0-experimental-74568e86-20260328",
+        "react-reconciler": "0.0.0-experimental-74568e86-20260328",
         "semver": "^7.6.3",
         "sharp": "^0.34.2",
         "shell-quote": "^1.8.3",
@@ -818,6 +820,8 @@
     "raw-body": ["raw-body@3.0.2", "https://registry.npmmirror.com/raw-body/-/raw-body-3.0.2.tgz", { "dependencies": { "bytes": "~3.1.2", "http-errors": "~2.0.1", "iconv-lite": "~0.7.0", "unpipe": "~1.0.0" } }, "sha512-K5zQjDllxWkf7Z5xJdV0/B0WTNqx6vxG70zJE4N0kBs4LovmEYWJzQGxC9bS9RAKu3bgM40lrd5zoLJ12MQ5BA=="],
 
     "react": ["react@0.0.0-experimental-74568e86-20260328", "https://registry.npmmirror.com/react/-/react-0.0.0-experimental-74568e86-20260328.tgz", {}, "sha512-QyAMBv4Nwn5bel07FV0oYP2xi71tCZXE8cVak8kbZCPQYHm22sX7A8rVVHNtD7xg81WM1ERxEnRP6B4XIK7lCw=="],
+
+    "react-dom": ["react-dom@0.0.0-experimental-74568e86-20260328", "", { "dependencies": { "scheduler": "0.0.0-experimental-74568e86-20260328" }, "peerDependencies": { "react": "0.0.0-experimental-74568e86-20260328" } }, "sha512-kq68ge+OCfVPbFJI4VmPlYSKkp46n5AIRvmZun59vWcr88+EobD2ZfnwKqPscYlzyCwC5Mr5W585C86yK1BdoQ=="],
 
     "react-reconciler": ["react-reconciler@0.0.0-experimental-74568e86-20260328", "https://registry.npmmirror.com/react-reconciler/-/react-reconciler-0.0.0-experimental-74568e86-20260328.tgz", { "dependencies": { "scheduler": "0.0.0-experimental-74568e86-20260328" }, "peerDependencies": { "react": "0.0.0-experimental-74568e86-20260328" } }, "sha512-sCyZVZP7wYBpz9AteKGFYR5XvT4mLbkTRq6TmsMdBnYt402KCLJW1DxNYkA63/bsbWtbYnfhcJsgh/ARhkWyKw=="],
 
