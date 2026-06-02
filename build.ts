@@ -50,7 +50,7 @@ console.log('Building Claude Code from restored source...');
 console.log(`Feature flags: ${FEATURE_FLAGS.length} (all set to false)`);
 
 const result = await Bun.build({
-  entrypoints: ['./src/entrypoints/cli.tsx'],
+  entrypoints: ['./src/entrypoints/cli.tsx', './src/entrypoints/dj-engine.ts'],
   outdir: './dist',
   target: 'node',
   format: 'esm',
@@ -68,6 +68,10 @@ const result = await Bun.build({
     'image-processor-napi',
     'modifiers-napi',
     'url-handler-napi',
+    // 反编译版 + Bun 1.3.x DCE 会消除这些包的内部 helper（zod _gte / lodash 等），
+    // 外置不打进 bundle、由运行时 node_modules 解析，避免运行期 ReferenceError。
+    'zod',
+    'lodash-es',
   ],
   plugins: [
     {
